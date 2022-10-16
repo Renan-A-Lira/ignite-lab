@@ -16,7 +16,7 @@ export const Button = ({asChild, children}: ButtonProps) => {
     return (
         <Comp 
         className={clsx(
-            'py-4 px-3 bg-cyan-500 font-semibold rounded text-black text-sm w-full',
+            'py-3 px-4 bg-cyan-500 font-semibold rounded text-black text-sm w-full',
             'hover:bg-cyan-300 transition-colors duration-500'
         )}
         >

@@ -6,10 +6,11 @@ import { ReactNode } from "react"
 export interface HeadingProps {
     size?: 'sm' | 'md' | 'lg',
     asChild?: boolean,
-    children: ReactNode
+    children: ReactNode,
+    className?: string
 }
 
-export const Heading = ({size = 'md', asChild, children}: HeadingProps) => {
+export const Heading = ({size = 'md', asChild, children, className}: HeadingProps) => {
 
     const Comp = asChild ? Slot : 'h2'
 
@@ -20,7 +21,8 @@ export const Heading = ({size = 'md', asChild, children}: HeadingProps) => {
                 'text-lg': size === 'sm',
                 'text-xl': size === 'md',
                 'text-2xl': size === 'lg'
-            }
+            },
+            className
             )
         }
         >
